@@ -12,7 +12,11 @@ const aiReviewRouter = require("./routes/aiReview");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173", "https://rythmos16.vercel.app"],
+  methods: ["GET", "POST", "PATCH", "DELETE"],
+  credentials: true
+}));
 app.use(express.json({ limit: "1mb" }));
 app.use(morgan("dev"));
 
