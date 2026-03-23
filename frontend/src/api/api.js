@@ -1,4 +1,4 @@
-const API_BASE = " https://rythmos16-5.onrender.com";
+const API_BASE = " https://rythmos16-5.onrender.com/api";
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, {
